@@ -1,5 +1,9 @@
 import streamlit as st
-climate_data.csv")
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("tanzania_clmate_data.csv")
 
 # --- Preprocess ---
 df['avg_temp'] = (df['Max_Temperature_C'] + df['Min_Temperature_C']) / 2
